@@ -10,16 +10,30 @@ public class Rosie : MonoBehaviour
 
     public AnimationStateChanger asc;
 
-    // Start is called before the first frame update
+    SpriteRenderer spriteRenderer;
+
     void Start()
     {
+        spriteRenderer = GetComponent<SpriteRenderer>();
         rbd2 = GetComponent<Rigidbody2D>();
     }
 
     public void Move(Vector3 offset){
         if(offset != Vector3.zero){
             rbd2.MovePosition(transform.position + ((offset) * speed));
-            asc.ChangeAnimationState("Walking");
+
+            if(offset.x < 0){
+                asc.ChangeAnimationState("WalkingLR");
+                spriteRenderer.flipX = true;
+            }else if(offset.x > 0){
+                asc.ChangeAnimationState("WalkingLR");
+                spriteRenderer.flipX = false;
+            }else if(offset.y < 0){
+                asc.ChangeAnimationState("WalkingD");
+            }else if(offset.y > 0){
+                asc.ChangeAnimationState("WalkingU");
+            }
+
         }else{
             asc.ChangeAnimationState("Idle");
         }
