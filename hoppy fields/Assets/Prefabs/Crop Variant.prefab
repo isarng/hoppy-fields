@@ -17,7 +17,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7609716447917199724, guid: 67e32c029f211564e9e7a3b5fa58987d, type: 3}
       propertyPath: m_Name
-      value: Crop
+      value: Crop Variant
       objectReference: {fileID: 0}
     - target: {fileID: 7609716447917199725, guid: 67e32c029f211564e9e7a3b5fa58987d, type: 3}
       propertyPath: m_RootOrder
@@ -63,5 +63,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7609716447917199730, guid: 67e32c029f211564e9e7a3b5fa58987d, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7609716447917199730, guid: 67e32c029f211564e9e7a3b5fa58987d, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7609716447917199731, guid: 67e32c029f211564e9e7a3b5fa58987d, type: 3}
+      propertyPath: type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7609716447917199731, guid: 67e32c029f211564e9e7a3b5fa58987d, type: 3}
+      propertyPath: selectedPlant
+      value: 
+      objectReference: {fileID: 11400000, guid: 8903ae505ac3047dbaecfef88bcb875b, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 67e32c029f211564e9e7a3b5fa58987d, type: 3}

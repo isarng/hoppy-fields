@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class Rosie : MonoBehaviour
 {
-
     Rigidbody2D rbd2;
     public float speed = 2.5f;
-
     public AnimationStateChanger asc;
-
     SpriteRenderer spriteRenderer;
+
+    public Inventory inventory;
+
+    private void Awake(){
+        inventory = new Inventory(21);
+    }
 
     void Start()
     {
