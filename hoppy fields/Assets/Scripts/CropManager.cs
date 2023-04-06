@@ -65,7 +65,7 @@ public class CropManager : MonoBehaviour
 
     // void Clicking(){
     //     if (Input.GetMouseButtonDown(0))
-    //  {
+    //     {
     //      // Cast a ray from the camera to where you clicked
     //      Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
  
@@ -73,10 +73,11 @@ public class CropManager : MonoBehaviour
     //      if (Physics.Raycast(ray, out RaycastHit hit))
     //      {
     //         GameObject hitObject = hit.collider.gameObject;
+    //         selectedPlant.gameObject = hitObject;
     //         if(isPlanted){
     //             if(plantStage == selectedPlant.plantStages.Length - 1){
     //                 Harvest();
-    //                 rosie.inventory.Add(type);
+    //                 // rosie.inventory.Add(type);
     //             }
     //                 // selectedPlant.harvestedPlant++;
     //                 //run some function to display harvested plant icons
@@ -84,7 +85,7 @@ public class CropManager : MonoBehaviour
     //             Plant();
     //         }
     //       }
-    //   }
+    //     }
     // }
 
     void Harvest(){
