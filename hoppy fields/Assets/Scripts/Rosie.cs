@@ -2,8 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
 public class Rosie : MonoBehaviour
 {
+
+    public static Rosie singletonR;
+
     Rigidbody2D rbd2;
     public float speed = 2.5f;
     public AnimationStateChanger asc;
@@ -12,6 +17,7 @@ public class Rosie : MonoBehaviour
     public Inventory inventory;
 
     private void Awake(){
+        singletonR = this;
         inventory = new Inventory(21);
     }
 

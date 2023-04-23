@@ -14,8 +14,11 @@ public class CropManager : MonoBehaviour
 
     public SeedType type;
 
+    Rosie rosie;
+
     void Start()
     {
+        rosie = Rosie.singletonR;
         plant = transform.GetChild(0).GetComponent<SpriteRenderer>();
     }
 
@@ -32,7 +35,7 @@ public class CropManager : MonoBehaviour
     }
 
     // private void OnTriggerEnter2D(Collider2D collision){
-    //     Rosie rosie = collision.gameObject.GetComponent<Rosie>();
+    //     Rosie rosie = collision.GetComponent<Rosie>();
         
     //     if(isPlanted){
     //         if(plantStage == selectedPlant.plantStages.Length-1){
@@ -51,9 +54,14 @@ public class CropManager : MonoBehaviour
         if(isPlanted){
             if(plantStage == selectedPlant.plantStages.Length - 1){
                 Harvest();
-                // Collider mycollider = GetComponent<Collider>();
+                // BoxCollider2D mycollider = GetComponent<BoxCollider2D>();
                 // Rosie rosie = mycollider.GetComponent<Rosie>();
-                // rosie.inventory.Add(type);
+                rosie.inventory.Add(type);
+                // if(rosie){
+                //   rosie.inventory.Add(type);  
+                //   Debug.Log("worked");
+                // }
+                
             }
                 // selectedPlant.harvestedPlant++;
                 //run some function to display harvested plant icons

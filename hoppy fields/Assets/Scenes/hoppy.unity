@@ -6087,6 +6087,10 @@ PrefabInstance:
       propertyPath: selectedPlant
       value: 
       objectReference: {fileID: 11400000, guid: 14d75efbf2b4e4603adbf5227999fe8f, type: 2}
+    - target: {fileID: 146892868344413827, guid: b2f3d663fa8624eeea858d006631eb32, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 146892868397833055, guid: b2f3d663fa8624eeea858d006631eb32, type: 3}
       propertyPath: rosie
       value: 
@@ -6111,6 +6115,10 @@ PrefabInstance:
       propertyPath: selectedPlant
       value: 
       objectReference: {fileID: 11400000, guid: 14d75efbf2b4e4603adbf5227999fe8f, type: 2}
+    - target: {fileID: 146892868810337623, guid: b2f3d663fa8624eeea858d006631eb32, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 146892868830955595, guid: b2f3d663fa8624eeea858d006631eb32, type: 3}
       propertyPath: selectedPlant
       value: 
@@ -6127,6 +6135,10 @@ PrefabInstance:
       propertyPath: selectedPlant
       value: 
       objectReference: {fileID: 11400000, guid: 14d75efbf2b4e4603adbf5227999fe8f, type: 2}
+    - target: {fileID: 146892868920734957, guid: b2f3d663fa8624eeea858d006631eb32, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 146892869080584360, guid: b2f3d663fa8624eeea858d006631eb32, type: 3}
       propertyPath: selectedPlant
       value: 
