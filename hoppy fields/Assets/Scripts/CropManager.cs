@@ -4,17 +4,22 @@ using UnityEngine;
 
 public class CropManager : MonoBehaviour
 {
-
+    Rosie rosie;
     bool isPlanted = false;
     SpriteRenderer plant;
     int plantStage = 0;
     float timer;
 
     public PlantObject selectedPlant;
-
     public SeedType type;
+    
+    public Sprite icon;
 
-    Rosie rosie;
+    // public Rigidbody2D rb2d;
+
+    // private void Awake(){
+    //     rb2d = GetComponent<Rigidbody2D>();
+    // }
 
     void Start()
     {
@@ -34,67 +39,16 @@ public class CropManager : MonoBehaviour
         } 
     }
 
-    // private void OnTriggerEnter2D(Collider2D collision){
-    //     Rosie rosie = collision.GetComponent<Rosie>();
-        
-    //     if(isPlanted){
-    //         if(plantStage == selectedPlant.plantStages.Length-1){
-                
-    //                 Harvest();
-    //                 rosie.inventory.Add(type);
-                
-    //         }else{
-    //             Plant();
-    //         }
-    //     }
-    // }
-
-
     private void OnMouseDown(){
         if(isPlanted){
             if(plantStage == selectedPlant.plantStages.Length - 1){
                 Harvest();
-                // BoxCollider2D mycollider = GetComponent<BoxCollider2D>();
-                // Rosie rosie = mycollider.GetComponent<Rosie>();
-                rosie.inventory.Add(type);
-                // if(rosie){
-                //   rosie.inventory.Add(type);  
-                //   Debug.Log("worked");
-                // }
-                
+                rosie.inventory.Add(this);
             }
-                // selectedPlant.harvestedPlant++;
-                //run some function to display harvested plant icons
         }else{
             Plant();
         }
     } 
-
-
-    // void Clicking(){
-    //     if (Input.GetMouseButtonDown(0))
-    //     {
-    //      // Cast a ray from the camera to where you clicked
-    //      Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
- 
-    //      // If the raycast hit something..
-    //      if (Physics.Raycast(ray, out RaycastHit hit))
-    //      {
-    //         GameObject hitObject = hit.collider.gameObject;
-    //         selectedPlant.gameObject = hitObject;
-    //         if(isPlanted){
-    //             if(plantStage == selectedPlant.plantStages.Length - 1){
-    //                 Harvest();
-    //                 // rosie.inventory.Add(type);
-    //             }
-    //                 // selectedPlant.harvestedPlant++;
-    //                 //run some function to display harvested plant icons
-    //         }else{
-    //             Plant();
-    //         }
-    //       }
-    //     }
-    // }
 
     void Harvest(){
         Debug.Log("Harvested");
@@ -115,6 +69,7 @@ public class CropManager : MonoBehaviour
         plant.sprite = selectedPlant.plantStages[plantStage];
     }
 }
+
 public enum SeedType{
     NONE, WHEAT_SEED, BEET_SEED
 }

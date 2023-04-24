@@ -12,6 +12,8 @@ public class Inventory
         public int count;
         public int maxItems;
 
+        public Sprite icon;
+
         public Slot(){
             type = SeedType.NONE;
             count = 0;
@@ -26,9 +28,21 @@ public class Inventory
             return false;
         }
 
-        public void AddItem(SeedType type){
-            this.type = type;
+        public void AddItem(CropManager item){
+            this.type = item.type;
+            this.icon = item.icon;
             count++;
+        }
+
+        public void RemoveItem(){
+            if(count > 0){
+                count--;
+
+                if(count == 0){
+                    icon = null;
+                    type = SeedType.NONE;
+                }
+            }
         }
 
     }    
@@ -42,20 +56,24 @@ public class Inventory
         }
     }
 
-    public void Add(SeedType typeToAdd){
+    public void Add(CropManager item){
         foreach (Slot slot in slots)
         {
-            if(slot.type == typeToAdd && slot.CanAddItem()){
-                slot.AddItem(typeToAdd);
+            if(slot.type == item.type && slot.CanAddItem()){
+                slot.AddItem(item);
                 return;
             }
         }
         foreach(Slot slot in slots){
             if(slot.type == SeedType.NONE){
-                slot.AddItem(typeToAdd);
+                slot.AddItem(item);
                 return;
             }
         }
+    }
+
+    public void Remove(int index){
+        slots[index].RemoveItem();
     }
 }
 

@@ -18,8 +18,22 @@ public class Rosie : MonoBehaviour
 
     private void Awake(){
         singletonR = this;
-        inventory = new Inventory(21);
+        inventory = new Inventory(20);
     }
+
+    // public void DropItem(CropManager item){
+    //     Vector3 spawnLocation = transform.position;
+
+    //     // spawn buffer
+    //     float randomX = Random.Range(-1f, 1f);
+    //     float randomY = Random.Range(-1f, 1f);
+
+    //     Vector3 spawnOffset = new Vector3(randomX, randomY, 0f).normalized;
+
+    //     CropManager droppedItem = Instantiate(item, spawnLocation + spawnOffset, Quaternion.identity);
+
+    //     droppedItem.rb2d.AddForce(spawnOffset * .2f, ForceMode2D.Impulse);
+    // }
 
     void Start()
     {
