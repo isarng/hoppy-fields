@@ -11,6 +11,8 @@ public class CropManager : MonoBehaviour
     float timer;
 
     public PlantObject selectedPlant;
+
+    FarmManager fm;
     public SeedType type;
     
     public Sprite icon;
@@ -24,8 +26,8 @@ public class CropManager : MonoBehaviour
     void Start()
     {
         rosie = Rosie.singletonR;
-        // selectedPlant = PlantObject.planty;
         plant = transform.GetChild(0).GetComponent<SpriteRenderer>();
+        fm = transform.parent.GetComponent<FarmManager>();
     }
 
     void Update()
@@ -39,6 +41,7 @@ public class CropManager : MonoBehaviour
             }
         } 
     }
+
     //     if(Input.GetKeyDown(KeyCode.Space)){
     //         Vector3Int position = new Vector3Int((int)rosie.transform.position.x,
     //         (int)rosie.transform.position.y, 0);
@@ -76,20 +79,20 @@ public class CropManager : MonoBehaviour
     //     }
     // }
 
-
     private void OnMouseDown(){
-
         if(isPlanted){
             if(plantStage == selectedPlant.plantStages.Length - 1){
                 Harvest();
                 rosie.inventory.Add(this);
             }
         }else if(tag == "beetseed"){
-            Debug.Log("seed");
-            // rosie.inventory.Add(this);
+            // Debug.Log("beet seed");
             PickOrReceive();
-        }else{
-            Plant();
+        }else if(tag == "wheat temp"){
+            // Debug.Log("wheat seed");
+            PickOrReceive();
+        }else if(fm.isPlanting){
+            Plant(fm.selectPlant);
         }
     } 
 
@@ -101,12 +104,15 @@ public class CropManager : MonoBehaviour
 
     void PickOrReceive(){
         rosie.inventory.Add(this);
-        Debug.Log("Picked up");
+        // Debug.Log("Picked up");
         Destroy(this.gameObject);
 
     }
 
-    void Plant(){
+    void Plant(PlantObject newPlant){
+        selectedPlant = newPlant;
+        type = selectedPlant.seedy;
+        icon = selectedPlant.icon;
         Debug.Log("Planted");
         isPlanted = true;
         plantStage = 0;

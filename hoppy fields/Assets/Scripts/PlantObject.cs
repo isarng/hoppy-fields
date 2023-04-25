@@ -12,7 +12,8 @@ public class PlantObject : ScriptableObject
     public float timerMax;
     public int price;
     public Sprite icon;
-    public int harvestedPlant;
+    // public int harvestedPlant;
+    public SeedType seedy;
 
     // private void Awake(){
     //     planty = this;

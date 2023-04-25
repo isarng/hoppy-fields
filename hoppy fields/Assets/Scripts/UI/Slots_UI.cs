@@ -8,6 +8,11 @@ public class Slots_UI : MonoBehaviour
     public Image itemIcon;
     public TextMeshProUGUI quantityText;
     public PlantObject plantyType;
+    FarmManager fm;
+
+    void Start(){
+        fm = FindObjectOfType<FarmManager>();
+    }
 
     public void SetItem(Inventory.Slot slot){
         if(slot != null){
@@ -20,6 +25,7 @@ public class Slots_UI : MonoBehaviour
 
     public void ChoosePlant(){
         Debug.Log("Chose " + plantyType.plantName);
+        fm.SelectPlant(plantyType);
     }
 
     public void SetEmpty(){

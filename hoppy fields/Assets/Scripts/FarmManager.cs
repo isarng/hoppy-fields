@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class FarmManager : MonoBehaviour
 {
+
+    public PlantObject selectPlant;
+    public bool isPlanting = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,4 +19,17 @@ public class FarmManager : MonoBehaviour
     {
         
     }
+
+    public void SelectPlant(PlantObject newPlant){
+        if(selectPlant == newPlant){
+            Debug.Log("Deselected " + selectPlant.plantName);
+            selectPlant = null;
+            isPlanting = false;
+        }else{
+            selectPlant = newPlant;
+            Debug.Log("Selected " + selectPlant.plantName);
+            isPlanting = true;
+        }
+    }
+
 }
