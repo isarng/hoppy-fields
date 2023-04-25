@@ -26,10 +26,11 @@ public class FarmManager : MonoBehaviour
             selectPlant = null;
             isPlanting = false;
         }else{
-            selectPlant = newPlant;
-            Debug.Log("Selected " + selectPlant.plantName);
-            isPlanting = true;
+                selectPlant = newPlant;
+                Debug.Log("Selected " + selectPlant.plantName);
+                isPlanting = true;
         }
+            
     }
 
 }

@@ -85,13 +85,15 @@ public class CropManager : MonoBehaviour
                 Harvest();
                 rosie.inventory.Add(this);
             }
-        }else if(tag == "beetseed"){
-            // Debug.Log("beet seed");
-            PickOrReceive();
-        }else if(tag == "wheat temp"){
-            // Debug.Log("wheat seed");
-            PickOrReceive();
-        }else if(fm.isPlanting){
+        }
+        // else if(tag == "beetseed"){
+        //     // Debug.Log("beet seed");
+        //     PickOrReceive();
+        // }else if(tag == "wheat temp"){
+        //     // Debug.Log("wheat seed");
+        //     PickOrReceive();
+        // }
+        else if(fm.isPlanting){
             Plant(fm.selectPlant);
         }
     } 
@@ -102,11 +104,10 @@ public class CropManager : MonoBehaviour
         plant.gameObject.SetActive(false);
     }
 
-    void PickOrReceive(){
+    public void Buy(){
         rosie.inventory.Add(this);
-        // Debug.Log("Picked up");
-        Destroy(this.gameObject);
-
+        Debug.Log("Bought");
+        // Destroy(this.gameObject);
     }
 
     void Plant(PlantObject newPlant){
