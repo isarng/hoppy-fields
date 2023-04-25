@@ -1108,7 +1108,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &505061309
 MonoBehaviour:
@@ -1689,7 +1689,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &668220122
 PrefabInstance:
@@ -2493,7 +2493,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1026352669
 GameObject:
@@ -2591,7 +2591,7 @@ RectTransform:
   - {fileID: 1655043299}
   - {fileID: 506165103}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2640,7 +2640,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1106369395 stripped
 GameObject:
@@ -2751,7 +2751,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 514789764943370380, guid: f14e1e32892fe42888d6a665faf6de9d, type: 3}
       propertyPath: m_Name
-      value: PlantItem (2)
+      value: 'WheatSeed PlantItem '
       objectReference: {fileID: 0}
     - target: {fileID: 514789764943370380, guid: f14e1e32892fe42888d6a665faf6de9d, type: 3}
       propertyPath: m_TagString
@@ -2759,7 +2759,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8267643857219901805, guid: f14e1e32892fe42888d6a665faf6de9d, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8267643857219901805, guid: f14e1e32892fe42888d6a665faf6de9d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4537,7 +4537,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1210375057
 MonoBehaviour:
@@ -7503,8 +7503,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectedPlant: {fileID: 11400000, guid: 14d75efbf2b4e4603adbf5227999fe8f, type: 2}
-  type: 1
-  icon: {fileID: -886986161, guid: 658dbe7ee4e1dd04f8711f5e3eb2b67e, type: 3}
+  type: 3
+  icon: {fileID: -1282382597, guid: 658dbe7ee4e1dd04f8711f5e3eb2b67e, type: 3}
 --- !u!212 &1393335637
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10329,7 +10329,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 622d942a66f403b48982cbcad9fe6169, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedPlant: {fileID: 11400000, guid: 6f4148f0bcc78472fbf6adaaf4adc5ef, type: 2}
+  selectedPlant: {fileID: 11400000, guid: 8903ae505ac3047dbaecfef88bcb875b, type: 2}
   type: 4
   icon: {fileID: 159928426, guid: 658dbe7ee4e1dd04f8711f5e3eb2b67e, type: 3}
 --- !u!61 &1968248476
@@ -10395,13 +10395,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2008226214}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.07304077, y: -0.3448707, z: -0.024704544}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2035570300
 GameObject:
@@ -10744,7 +10744,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8267643857219901805, guid: f14e1e32892fe42888d6a665faf6de9d, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8267643857219901805, guid: f14e1e32892fe42888d6a665faf6de9d, type: 3}
       propertyPath: m_LocalPosition.x

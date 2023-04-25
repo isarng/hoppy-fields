@@ -74,6 +74,12 @@ public class Inventory
                 return;
             }
         }
+        
+            // if(slot.type == item.type && item.icon != slot.icon){
+            //     slot.AddItem(item);
+            //     return;
+            // }
+        
     }
 
     public void Remove(int index){

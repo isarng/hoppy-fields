@@ -111,7 +111,13 @@ public class CropManager : MonoBehaviour
 
     void Plant(PlantObject newPlant){
         selectedPlant = newPlant;
-        type = selectedPlant.seedy;
+        if(selectedPlant.seedy == SeedType.WHEAT_SEED){
+            type = SeedType.WHEAT;
+        }else if(selectedPlant.seedy == SeedType.BEET_SEED){
+            type = SeedType.BEET;
+        }else{
+            type = selectedPlant.seedy;
+        }
         icon = selectedPlant.icon;
         Debug.Log("Planted");
         isPlanted = true;
