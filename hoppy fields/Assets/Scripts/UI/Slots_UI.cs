@@ -23,6 +23,11 @@ public class Slots_UI : MonoBehaviour
         }
     }
 
+    public void DecItem(Inventory.Slot slot){
+        
+    }
+
+
     public void ChoosePlant(){
         Debug.Log("Chose " + plantyType.plantName);
         fm.SelectPlant(plantyType);

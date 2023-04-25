@@ -16,11 +16,12 @@ public class Rosie : MonoBehaviour
 
     public Inventory inventory;
 
+
     private void Awake(){
         singletonR = this;
         inventory = new Inventory(20);
     }
-
+    
 
 
     // public void DropItem(CropManager item){

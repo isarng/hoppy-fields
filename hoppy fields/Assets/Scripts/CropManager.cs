@@ -5,7 +5,7 @@ using UnityEngine;
 public class CropManager : MonoBehaviour
 {
     Rosie rosie;
-    bool isPlanted = false;
+    public bool isPlanted = false;
     SpriteRenderer plant;
     int plantStage = 0;
     float timer;
@@ -86,13 +86,6 @@ public class CropManager : MonoBehaviour
                 rosie.inventory.Add(this);
             }
         }
-        // else if(tag == "beetseed"){
-        //     // Debug.Log("beet seed");
-        //     PickOrReceive();
-        // }else if(tag == "wheat temp"){
-        //     // Debug.Log("wheat seed");
-        //     PickOrReceive();
-        // }
         else if(fm.isPlanting){
             Plant(fm.selectPlant);
         }
@@ -107,7 +100,6 @@ public class CropManager : MonoBehaviour
     public void Buy(){
         rosie.inventory.Add(this);
         Debug.Log("Bought");
-        // Destroy(this.gameObject);
     }
 
     void Plant(PlantObject newPlant){

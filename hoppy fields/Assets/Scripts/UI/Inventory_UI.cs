@@ -11,6 +11,7 @@ public class Inventory_UI : MonoBehaviour
 
     public List<Slots_UI> slots = new List<Slots_UI>();
 
+
     // Update is called once per frame
     void Update()
     {
@@ -39,6 +40,7 @@ public class Inventory_UI : MonoBehaviour
             }
         }
     }
+
 
     public void Remove(int slotID){
         rosie.inventory.Remove(slotID);
