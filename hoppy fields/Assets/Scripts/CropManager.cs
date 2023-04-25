@@ -24,6 +24,7 @@ public class CropManager : MonoBehaviour
     void Start()
     {
         rosie = Rosie.singletonR;
+        // selectedPlant = PlantObject.planty;
         plant = transform.GetChild(0).GetComponent<SpriteRenderer>();
     }
 
@@ -38,13 +39,55 @@ public class CropManager : MonoBehaviour
             }
         } 
     }
+    //     if(Input.GetKeyDown(KeyCode.Space)){
+    //         Vector3Int position = new Vector3Int((int)rosie.transform.position.x,
+    //         (int)rosie.transform.position.y, 0);
+
+    //         if(GameManager.instance.tileManager.IsInteractable(position)){
+    //             Debug.Log("woohoo");
+    //             // GameManager.instance.tileManager.SetInteracted(position);
+    //             if(isPlanted){
+    //                 if(plantStage == selectedPlant.plantStages.Length - 1){
+    //                     Harvest();
+    //                     rosie.inventory.Add(this);
+    //                 }
+    //             }else{
+    //                 Plant();
+    //             }
+    //         }
+    //     }
+     //}
+
+    // void OnTriggerEnter2D(Collider2D other){
+
+    //     rosie = other.GetComponent<Rosie>();
+    //     if(rosie){
+    //        if(other.gameObject.tag == "beetseed"){
+    //            PickOrReceive(); 
+    //     }  
+    //     }
+
+        
+    //}
+
+    // private void OnTriggerEnter2D(Collider2D collision){
+    //     if(this.tag == "beetseed"){
+    //         PickOrReceive();
+    //     }
+    // }
+
 
     private void OnMouseDown(){
+
         if(isPlanted){
             if(plantStage == selectedPlant.plantStages.Length - 1){
                 Harvest();
                 rosie.inventory.Add(this);
             }
+        }else if(tag == "beetseed"){
+            Debug.Log("seed");
+            // rosie.inventory.Add(this);
+            PickOrReceive();
         }else{
             Plant();
         }
@@ -54,6 +97,13 @@ public class CropManager : MonoBehaviour
         Debug.Log("Harvested");
         isPlanted = false;
         plant.gameObject.SetActive(false);
+    }
+
+    void PickOrReceive(){
+        rosie.inventory.Add(this);
+        Debug.Log("Picked up");
+        Destroy(this.gameObject);
+
     }
 
     void Plant(){
@@ -71,5 +121,5 @@ public class CropManager : MonoBehaviour
 }
 
 public enum SeedType{
-    NONE, WHEAT_SEED, BEET_SEED
+    NONE, WHEAT, BEET, WHEAT_SEED, BEET_SEED
 }

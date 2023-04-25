@@ -20,5 +20,5 @@ MonoBehaviour:
   - {fileID: -1546273572, guid: 658dbe7ee4e1dd04f8711f5e3eb2b67e, type: 3}
   timerMax: 2
   price: 0
-  icon: {fileID: -1282382597, guid: 658dbe7ee4e1dd04f8711f5e3eb2b67e, type: 3}
+  icon: {fileID: -886986161, guid: 658dbe7ee4e1dd04f8711f5e3eb2b67e, type: 3}
   harvestedPlant: 0

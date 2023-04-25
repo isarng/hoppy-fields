@@ -21,6 +21,8 @@ public class Rosie : MonoBehaviour
         inventory = new Inventory(20);
     }
 
+
+
     // public void DropItem(CropManager item){
     //     Vector3 spawnLocation = transform.position;
 

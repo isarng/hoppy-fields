@@ -8,6 +8,7 @@ public class Inventory
 {
     [System.Serializable]
     public class Slot{
+        public PlantObject plantType;
         public SeedType type;
         public int count;
         public int maxItems;
@@ -18,6 +19,7 @@ public class Inventory
             type = SeedType.NONE;
             count = 0;
             maxItems = 99;
+            plantType = null;
         }
 
         public bool CanAddItem(){
@@ -31,6 +33,7 @@ public class Inventory
         public void AddItem(CropManager item){
             this.type = item.type;
             this.icon = item.icon;
+            this.plantType = item.selectedPlant;
             count++;
         }
 
@@ -41,6 +44,7 @@ public class Inventory
                 if(count == 0){
                     icon = null;
                     type = SeedType.NONE;
+                    plantType = null;
                 }
             }
         }

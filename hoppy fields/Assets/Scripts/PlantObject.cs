@@ -6,10 +6,16 @@ using UnityEngine;
 
 public class PlantObject : ScriptableObject
 {
+    // public static PlantObject planty;
     public string plantName;
     public Sprite[] plantStages;
     public float timerMax;
     public int price;
     public Sprite icon;
     public int harvestedPlant;
+
+    // private void Awake(){
+    //     planty = this;
+    // }
+
 }
