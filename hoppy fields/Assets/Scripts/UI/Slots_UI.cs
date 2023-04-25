@@ -23,9 +23,9 @@ public class Slots_UI : MonoBehaviour
         }
     }
 
-    public void DecItem(Inventory.Slot slot){
-        
-    }
+    // public void DecItem(Inventory.Slot slot){
+    //     if(slot )
+    // }
 
 
     public void ChoosePlant(){

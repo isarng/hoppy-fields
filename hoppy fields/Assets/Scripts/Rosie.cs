@@ -23,8 +23,7 @@ public class Rosie : MonoBehaviour
     }
     
 
-
-    // public void DropItem(CropManager item){
+// public void DropItem(CropManager item){
     //     Vector3 spawnLocation = transform.position;
 
     //     // spawn buffer
@@ -36,7 +35,7 @@ public class Rosie : MonoBehaviour
     //     CropManager droppedItem = Instantiate(item, spawnLocation + spawnOffset, Quaternion.identity);
 
     //     droppedItem.rb2d.AddForce(spawnOffset * .2f, ForceMode2D.Impulse);
-    // }
+// }
 
     void Start()
     {

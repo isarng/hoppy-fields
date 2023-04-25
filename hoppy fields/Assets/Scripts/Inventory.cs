@@ -76,8 +76,10 @@ public class Inventory
         }
     }
 
+
     public void Remove(int index){
         slots[index].RemoveItem();
+        
     }
 }
 

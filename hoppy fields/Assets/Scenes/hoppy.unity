@@ -239,10 +239,10 @@ RectTransform:
   m_Father: {fileID: 1723235616}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 155, y: -50}
+  m_SizeDelta: {x: 310, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &9520146
 MonoBehaviour:
@@ -256,6 +256,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 622d942a66f403b48982cbcad9fe6169, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPlanted: 0
   selectedPlant: {fileID: 11400000, guid: 14d75efbf2b4e4603adbf5227999fe8f, type: 2}
   type: 3
   icon: {fileID: -1282382597, guid: 658dbe7ee4e1dd04f8711f5e3eb2b67e, type: 3}
@@ -1510,6 +1511,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvasText1: {fileID: 1655043300}
+  canvasText2: {fileID: 0}
+  canvasText3: {fileID: 0}
 --- !u!1 &506165102
 GameObject:
   m_ObjectHideFlags: 0
@@ -1737,7 +1740,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &518758897
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1935,6 +1938,86 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf11b2dcf6877ca468064cdd97114d5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &538820725
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 538820726}
+  - component: {fileID: 538820728}
+  - component: {fileID: 538820727}
+  m_Layer: 5
+  m_Name: First Store Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &538820726
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 538820725}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1655043299}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 320, y: -550}
+  m_SizeDelta: {x: 821.94, y: 352.08}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &538820727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 538820725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 0668b6b0e3599d64d9f19d2a01c145e0, type: 3}
+    m_FontSize: 35
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 40
+    m_Alignment: 1
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "To purchase a seed, \npress the \"Buy\" button."
+--- !u!222 &538820728
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 538820725}
+  m_CullTransparentMesh: 1
 --- !u!4 &539751389 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7563061930927640188, guid: b2f3d663fa8624eeea858d006631eb32, type: 3}
@@ -2701,6 +2784,8 @@ GameObject:
   - component: {fileID: 776833971}
   - component: {fileID: 776833970}
   - component: {fileID: 776833973}
+  - component: {fileID: 776833974}
+  - component: {fileID: 776833975}
   m_Layer: 0
   m_Name: bunny part2
   m_TagString: Untagged
@@ -2814,6 +2899,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shopPanel: {fileID: 518758896}
+--- !u!50 &776833974
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 776833969}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &776833975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 776833969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e97e07a31de6141e88f9a94e4cef176e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &805046969
 GameObject:
   m_ObjectHideFlags: 0
@@ -3012,6 +3130,89 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!1 &847774571
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 847774574}
+  - component: {fileID: 847774573}
+  - component: {fileID: 847774572}
+  m_Layer: 5
+  m_Name: 'Welcome Text '
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &847774572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 847774571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 0668b6b0e3599d64d9f19d2a01c145e0, type: 3}
+    m_FontSize: 35
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 40
+    m_Alignment: 1
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'Welcome to Hoppy Fields!
+
+    Walk over to the bunny on the left to purchase
+    some seeds.'
+--- !u!222 &847774573
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 847774571}
+  m_CullTransparentMesh: 1
+--- !u!224 &847774574
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 847774571}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1655043299}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 821.94, y: 352.08}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &925069548
 GameObject:
   m_ObjectHideFlags: 0
@@ -3182,10 +3383,10 @@ RectTransform:
   m_Father: {fileID: 1723235616}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 155, y: -160}
+  m_SizeDelta: {x: 310, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &925103340
 MonoBehaviour:
@@ -3199,6 +3400,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 622d942a66f403b48982cbcad9fe6169, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPlanted: 0
   selectedPlant: {fileID: 11400000, guid: 8903ae505ac3047dbaecfef88bcb875b, type: 2}
   type: 4
   icon: {fileID: 159928426, guid: 658dbe7ee4e1dd04f8711f5e3eb2b67e, type: 3}
@@ -8508,6 +8710,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 622d942a66f403b48982cbcad9fe6169, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPlanted: 0
   selectedPlant: {fileID: 11400000, guid: 14d75efbf2b4e4603adbf5227999fe8f, type: 2}
   type: 3
   icon: {fileID: -1282382597, guid: 658dbe7ee4e1dd04f8711f5e3eb2b67e, type: 3}
@@ -10189,7 +10392,9 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 847774574}
+  - {fileID: 538820726}
   m_Father: {fileID: 1026352673}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10205,7 +10410,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1655043298}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
@@ -10231,8 +10436,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: To plant, click any plot of land. Once they have finished growing, click
-    to harvest.
+  m_Text: 'Welcome to Hoppy Fields!
+
+    Walk over to the bunny on the left to purchase
+    some seeds.'
 --- !u!222 &1655043301
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10253,7 +10460,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4824567d1f7291c4682205ca2c09154f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvasText1: {fileID: 0}
+  canvasText1: {fileID: 847774572}
+  canvasText2: {fileID: 538820727}
+  canvasText3: {fileID: 0}
 --- !u!1 &1684319550
 GameObject:
   m_ObjectHideFlags: 0
@@ -11482,6 +11691,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 622d942a66f403b48982cbcad9fe6169, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPlanted: 0
   selectedPlant: {fileID: 11400000, guid: 8903ae505ac3047dbaecfef88bcb875b, type: 2}
   type: 4
   icon: {fileID: 159928426, guid: 658dbe7ee4e1dd04f8711f5e3eb2b67e, type: 3}

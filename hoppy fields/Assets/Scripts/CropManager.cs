@@ -5,27 +5,28 @@ using UnityEngine;
 public class CropManager : MonoBehaviour
 {
     Rosie rosie;
+    // NPCScript npc;
+
     public bool isPlanted = false;
     SpriteRenderer plant;
     int plantStage = 0;
     float timer;
-
     public PlantObject selectedPlant;
-
-    FarmManager fm;
     public SeedType type;
-    
     public Sprite icon;
 
-    // public Rigidbody2D rb2d;
+    FarmManager fm;
+
+// public Rigidbody2D rb2d;
 
     // private void Awake(){
     //     rb2d = GetComponent<Rigidbody2D>();
-    // }
+// }
 
     void Start()
     {
         rosie = Rosie.singletonR;
+        // npc = NPCScript.singletonNPC;
         plant = transform.GetChild(0).GetComponent<SpriteRenderer>();
         fm = transform.parent.GetComponent<FarmManager>();
     }
@@ -39,10 +40,10 @@ public class CropManager : MonoBehaviour
                 plantStage++;
                 UpdatePlant();
             }
-        } 
+        }
     }
 
-    //     if(Input.GetKeyDown(KeyCode.Space)){
+//     if(Input.GetKeyDown(KeyCode.Space)){
     //         Vector3Int position = new Vector3Int((int)rosie.transform.position.x,
     //         (int)rosie.transform.position.y, 0);
 
@@ -59,25 +60,7 @@ public class CropManager : MonoBehaviour
     //             }
     //         }
     //     }
-     //}
-
-    // void OnTriggerEnter2D(Collider2D other){
-
-    //     rosie = other.GetComponent<Rosie>();
-    //     if(rosie){
-    //        if(other.gameObject.tag == "beetseed"){
-    //            PickOrReceive(); 
-    //     }  
-    //     }
-
-        
-    //}
-
-    // private void OnTriggerEnter2D(Collider2D collision){
-    //     if(this.tag == "beetseed"){
-    //         PickOrReceive();
-    //     }
-    // }
+//}
 
     private void OnMouseDown(){
         if(isPlanted){
@@ -102,6 +85,11 @@ public class CropManager : MonoBehaviour
         Debug.Log("Bought");
     }
 
+            // public void Dec(){
+            //     rosie.inventory.Remove(this.);
+            //     Debug.Log("removed");
+            // }
+
     void Plant(PlantObject newPlant){
         selectedPlant = newPlant;
         if(selectedPlant.seedy == SeedType.WHEAT_SEED){
@@ -114,6 +102,7 @@ public class CropManager : MonoBehaviour
         icon = selectedPlant.icon;
         Debug.Log("Planted");
         isPlanted = true;
+        // Dec();
         plantStage = 0;
         UpdatePlant();
         timer = selectedPlant.timerMax;
@@ -123,6 +112,7 @@ public class CropManager : MonoBehaviour
     void UpdatePlant(){
         plant.sprite = selectedPlant.plantStages[plantStage];
     }
+
 }
 
 public enum SeedType{
