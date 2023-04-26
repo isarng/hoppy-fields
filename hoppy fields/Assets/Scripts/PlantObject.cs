@@ -14,6 +14,7 @@ public class PlantObject : ScriptableObject
     public Sprite icon;
     // public int harvestedPlant;
     public SeedType seedy;
+    // public Rigidbody2D rbd2;
 
     // private void Awake(){
     //     planty = this;

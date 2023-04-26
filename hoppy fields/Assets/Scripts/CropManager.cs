@@ -33,6 +33,9 @@ public class CropManager : MonoBehaviour
 
     void Update()
     {   
+        // float distance = Vector3.Distance (rosie.transform.position, 
+        //     fm.transform.position);
+            // Debug.Log(distance);
         if(isPlanted){
             timer -= Time.deltaTime;
             if(timer < 0 && plantStage < selectedPlant.plantStages.Length-1){
@@ -84,11 +87,6 @@ public class CropManager : MonoBehaviour
         rosie.inventory.Add(this);
         Debug.Log("Bought");
     }
-
-            // public void Dec(){
-            //     rosie.inventory.Remove(this.);
-            //     Debug.Log("removed");
-            // }
 
     void Plant(PlantObject newPlant){
         selectedPlant = newPlant;
