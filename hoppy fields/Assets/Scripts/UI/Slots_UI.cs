@@ -30,7 +30,7 @@ public class Slots_UI : MonoBehaviour
             itemIcon.color = new Color(1,1,1,1);
             quantityText.text = slot.count.ToString();
             plantyType = slot.plantType;
-            // seedPlant = slot.type;
+            seedPlant = slot.type;
         }
     }
 
@@ -62,6 +62,7 @@ public class Slots_UI : MonoBehaviour
         itemIcon.color = new Color(1,1,1,0);
         quantityText.text = "";
         plantyType = null;
+        seedPlant = SeedType.NONE;
     }
 
 
