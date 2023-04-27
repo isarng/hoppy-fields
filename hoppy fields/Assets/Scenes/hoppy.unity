@@ -194,7 +194,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: $xxx
+  m_Text: $10
 --- !u!222 &1372420
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2773,6 +2773,7 @@ MonoBehaviour:
   asc: {fileID: 759970831}
   inventory:
     slots: []
+  playerCash: 20
 --- !u!1 &776833969
 GameObject:
   m_ObjectHideFlags: 0
@@ -6279,7 +6280,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: $xxx
+  m_Text: $5
 --- !u!222 &1346818280
 CanvasRenderer:
   m_ObjectHideFlags: 0

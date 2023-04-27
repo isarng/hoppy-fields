@@ -15,13 +15,14 @@ public class Rosie : MonoBehaviour
     SpriteRenderer spriteRenderer;
 
     public Inventory inventory;
+    public int playerCash = 20;
 
 
     private void Awake(){
         singletonR = this;
         inventory = new Inventory(20);
     }
-    
+
 
 // public void DropItem(CropManager item){
     //     Vector3 spawnLocation = transform.position;

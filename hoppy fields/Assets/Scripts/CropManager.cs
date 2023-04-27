@@ -87,8 +87,24 @@ public class CropManager : MonoBehaviour
     }
 
     public void Buy(){
-        rosie.inventory.Add(this);
-        Debug.Log("Bought");
+        if(this.type == SeedType.WHEAT_SEED){
+            if(rosie.playerCash - this.selectedPlant.price >= 0){
+                rosie.playerCash = rosie.playerCash - this.selectedPlant.price;
+                rosie.inventory.Add(this);
+                Debug.Log("Bought Wheat Seed");
+                Debug.Log("Rosie cash is now " + rosie.playerCash);    
+            }
+                
+        } else if(this.type == SeedType.BEET_SEED){
+            if(rosie.playerCash - this.selectedPlant.price >= 0){
+                rosie.playerCash = rosie.playerCash - this.selectedPlant.price;
+                rosie.inventory.Add(this);
+                Debug.Log("Bought Wheat Seed");  
+                Debug.Log("Rosie cash is now " + rosie.playerCash);      
+            }
+             
+        }
+        
     }
 
     void Plant(PlantObject newPlant){

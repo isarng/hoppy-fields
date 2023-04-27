@@ -18,7 +18,7 @@ MonoBehaviour:
   - {fileID: 595285063, guid: 658dbe7ee4e1dd04f8711f5e3eb2b67e, type: 3}
   - {fileID: 74591730, guid: 658dbe7ee4e1dd04f8711f5e3eb2b67e, type: 3}
   - {fileID: 1458691425, guid: 658dbe7ee4e1dd04f8711f5e3eb2b67e, type: 3}
-  timerMax: 3
-  price: 0
+  timerMax: 4
+  price: 10
   icon: {fileID: -70628186, guid: 658dbe7ee4e1dd04f8711f5e3eb2b67e, type: 3}
   seedy: 2
