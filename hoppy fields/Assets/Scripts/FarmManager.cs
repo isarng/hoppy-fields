@@ -25,7 +25,9 @@ public class FarmManager : MonoBehaviour
             Debug.Log("Deselected " + selectPlant.plantName);
             selectPlant = null;
             isPlanting = false;
-        }else if(newPlant.seedy != SeedType.WHEAT || newPlant.seedy != SeedType.BEET){
+        }else{
+        // else if(newPlant.seedy != SeedType.WHEAT || newPlant.seedy != SeedType.BEET){
+        // }else if(selectPlant.seedy != SeedType.WHEAT || selectPlant.seedy != SeedType.BEET){
                 selectPlant = newPlant;
                 Debug.Log("Selected " + selectPlant.plantName);
                 isPlanting = true;

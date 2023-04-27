@@ -53,8 +53,11 @@ public class Slots_UI : MonoBehaviour
 
 
     public void ChoosePlant(){
-        Debug.Log("Chose " + plantyType.plantName);
-        fm.SelectPlant(plantyType);
+        if(seedPlant != SeedType.WHEAT && seedPlant != SeedType.BEET){
+            Debug.Log("Chose " + plantyType.plantName);
+            fm.SelectPlant(plantyType);    
+        }
+        
     }
 
     public void SetEmpty(){
