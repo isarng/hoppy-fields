@@ -8,6 +8,8 @@ public class CropManager : MonoBehaviour
     // NPCScript npc;
 
     public bool isPlanted = false;
+    public static bool newBool = false;
+
     SpriteRenderer plant;
     int plantStage = 0;
     float timer;
@@ -80,6 +82,7 @@ public class CropManager : MonoBehaviour
     void Harvest(){
         Debug.Log("Harvested");
         isPlanted = false;
+        // newBool = false;
         plant.gameObject.SetActive(false);
     }
 
@@ -90,17 +93,18 @@ public class CropManager : MonoBehaviour
 
     void Plant(PlantObject newPlant){
         selectedPlant = newPlant;
-        if(selectedPlant.seedy == SeedType.WHEAT_SEED){
-            type = SeedType.WHEAT;
-        }else if(selectedPlant.seedy == SeedType.BEET_SEED){
-            type = SeedType.BEET;
-        }else{
-            type = selectedPlant.seedy;
-        }
+        // if(selectedPlant.seedy == SeedType.WHEAT_SEED){
+        //     type = SeedType.WHEAT;
+        // }else if(selectedPlant.seedy == SeedType.BEET_SEED){
+        //     type = SeedType.BEET;
+        // }else{
+        //     type = selectedPlant.seedy;
+        // }
+        type = selectedPlant.seedy;
         icon = selectedPlant.icon;
         Debug.Log("Planted");
         isPlanted = true;
-        // Dec();
+        newBool = true;
         plantStage = 0;
         UpdatePlant();
         timer = selectedPlant.timerMax;

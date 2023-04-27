@@ -9,12 +9,15 @@ public class Inventory_UI : MonoBehaviour
 
     public Rosie rosie;
 
+    public CropManager plantedOk;
+
     public List<Slots_UI> slots = new List<Slots_UI>();
 
 
     // Update is called once per frame
     void Update()
     {
+        Refresh();
         if (Input.GetKeyDown(KeyCode.Tab)) {
             ToggleInventory();    
         }
@@ -34,12 +37,17 @@ public class Inventory_UI : MonoBehaviour
             for(int i = 0; i < slots.Count; i++){
                 if(rosie.inventory.slots[i].type != SeedType.NONE){
                     slots[i].SetItem(rosie.inventory.slots[i]);
-                }else{
+                }
+                else{
                     slots[i].SetEmpty();
                 }
+                
+                slots[i].DecItem(rosie.inventory.slots[i]);
+                
             }
         }
     }
+
 
 
     public void Remove(int slotID){

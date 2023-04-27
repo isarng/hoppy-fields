@@ -10,9 +10,19 @@ public class Slots_UI : MonoBehaviour
     public PlantObject plantyType;
     FarmManager fm;
 
+    public SeedType seedPlant;
+
+    public CropManager plantedOk;
+    public bool someBool;
+
     void Start(){
         fm = FindObjectOfType<FarmManager>();
+        // someBool = 
     }
+
+    // void Update(){
+    //     DecItem();
+    // }
 
     public void SetItem(Inventory.Slot slot){
         if(slot != null){
@@ -20,12 +30,26 @@ public class Slots_UI : MonoBehaviour
             itemIcon.color = new Color(1,1,1,1);
             quantityText.text = slot.count.ToString();
             plantyType = slot.plantType;
+            // seedPlant = slot.type;
         }
     }
 
-    // public void DecItem(Inventory.Slot slot){
-    //     if(slot )
-    // }
+    public void DecItem(Inventory.Slot slot){
+        if(CropManager.newBool == true && slot.plantType == fm.selectPlant){
+            slot.RemoveItem();
+            quantityText.text = slot.count.ToString();
+            if(slot.count==0){
+                fm.selectPlant = null;
+                fm.isPlanting = false; 
+            }
+            
+            CropManager.newBool = false;
+        }
+    
+    // if(slot.count <= 1){
+        
+    // }          
+    }
 
 
     public void ChoosePlant(){
