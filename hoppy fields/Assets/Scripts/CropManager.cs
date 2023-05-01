@@ -17,7 +17,7 @@ public class CropManager : MonoBehaviour
     public SeedType type;
     public Sprite icon;
 
-    FarmManager fm;
+    public FarmManager fm;
 
 // public Rigidbody2D rb2d;
 
@@ -74,7 +74,7 @@ public class CropManager : MonoBehaviour
                 rosie.inventory.Add(this);
             }
         }
-        else if(fm.isPlanting){
+        else if(fm.isPlanting && fm.selectPlant.buyPrice <= fm.money){
             Plant(fm.selectPlant);
         }
     } 
@@ -87,23 +87,26 @@ public class CropManager : MonoBehaviour
     }
 
     public void Buy(){
-        if(this.type == SeedType.WHEAT_SEED){
-            if(rosie.playerCash - this.selectedPlant.price >= 0){
-                rosie.playerCash = rosie.playerCash - this.selectedPlant.price;
-                rosie.inventory.Add(this);
-                Debug.Log("Bought Wheat Seed");
-                Debug.Log("Rosie cash is now " + rosie.playerCash);    
-            }
+        rosie.inventory.Add(this);
+        fm.Transaction(-this.selectedPlant.buyPrice);
+        
+        // if(this.type == SeedType.WHEAT_SEED){
+        //     if(rosie.playerCash - this.selectedPlant.price >= 0){
+        //         rosie.playerCash = rosie.playerCash - this.selectedPlant.price;
+        //         rosie.inventory.Add(this);
+        //         Debug.Log("Bought Wheat Seed");
+        //         Debug.Log("Rosie cash is now " + rosie.playerCash);    
+        //     }
                 
-        } else if(this.type == SeedType.BEET_SEED){
-            if(rosie.playerCash - this.selectedPlant.price >= 0){
-                rosie.playerCash = rosie.playerCash - this.selectedPlant.price;
-                rosie.inventory.Add(this);
-                Debug.Log("Bought Wheat Seed");  
-                Debug.Log("Rosie cash is now " + rosie.playerCash);      
-            }
+        // } else if(this.type == SeedType.BEET_SEED){
+        //     if(rosie.playerCash - this.selectedPlant.price >= 0){
+        //         rosie.playerCash = rosie.playerCash - this.selectedPlant.price;
+        //         rosie.inventory.Add(this);
+        //         Debug.Log("Bought Wheat Seed");  
+        //         Debug.Log("Rosie cash is now " + rosie.playerCash);      
+        //     }
              
-        }
+        // }
         
     }
 

@@ -10,7 +10,8 @@ public class PlantObject : ScriptableObject
     public string plantName;
     public Sprite[] plantStages;
     public float timerMax;
-    public int price;
+    public int buyPrice;
+    public int sellPrice;
     public Sprite icon;
     // public int harvestedPlant;
     public SeedType seedy;

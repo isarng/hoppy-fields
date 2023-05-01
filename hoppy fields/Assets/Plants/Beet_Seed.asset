@@ -15,6 +15,7 @@ MonoBehaviour:
   plantName: Beet Seed
   plantStages: []
   timerMax: 0
-  price: 0
+  buyPrice: 10
+  sellPrice: 20
   icon: {fileID: 159928426, guid: 658dbe7ee4e1dd04f8711f5e3eb2b67e, type: 3}
   seedy: 4

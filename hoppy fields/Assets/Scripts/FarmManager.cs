@@ -1,17 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FarmManager : MonoBehaviour
 {
 
     public PlantObject selectPlant;
     public bool isPlanting = false;
+    public Text moneyText;
+    public int money = 50;
+    
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        moneyText.text = "$" + money;
     }
 
     // Update is called once per frame
@@ -33,6 +37,11 @@ public class FarmManager : MonoBehaviour
                 isPlanting = true;
         }
             
+    }
+
+    public void Transaction(int value){
+        money += value;
+        moneyText.text = "$" + money;
     }
 
 }
