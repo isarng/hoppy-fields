@@ -260,7 +260,8 @@ MonoBehaviour:
   selectedPlant: {fileID: 11400000, guid: 14d75efbf2b4e4603adbf5227999fe8f, type: 2}
   type: 3
   icon: {fileID: -1282382597, guid: 658dbe7ee4e1dd04f8711f5e3eb2b67e, type: 3}
-  fm: {fileID: 0}
+  rosieCash: 0
+  cashText: {fileID: 1605265414}
 --- !u!1001 &108860240
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3487,7 +3488,8 @@ MonoBehaviour:
   selectedPlant: {fileID: 11400000, guid: 8903ae505ac3047dbaecfef88bcb875b, type: 2}
   type: 4
   icon: {fileID: 159928426, guid: 658dbe7ee4e1dd04f8711f5e3eb2b67e, type: 3}
-  fm: {fileID: 0}
+  rosieCash: 0
+  cashText: {fileID: 1605265414}
 --- !u!1 &1017798726
 GameObject:
   m_ObjectHideFlags: 0
@@ -8879,7 +8881,8 @@ MonoBehaviour:
   selectedPlant: {fileID: 11400000, guid: 14d75efbf2b4e4603adbf5227999fe8f, type: 2}
   type: 3
   icon: {fileID: -1282382597, guid: 658dbe7ee4e1dd04f8711f5e3eb2b67e, type: 3}
-  fm: {fileID: 0}
+  rosieCash: 0
+  cashText: {fileID: 0}
 --- !u!212 &1393335637
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11943,7 +11946,8 @@ MonoBehaviour:
   selectedPlant: {fileID: 11400000, guid: 8903ae505ac3047dbaecfef88bcb875b, type: 2}
   type: 4
   icon: {fileID: 159928426, guid: 658dbe7ee4e1dd04f8711f5e3eb2b67e, type: 3}
-  fm: {fileID: 0}
+  rosieCash: 0
+  cashText: {fileID: 0}
 --- !u!61 &1968248476
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12523,6 +12527,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 146892868041165197, guid: b2f3d663fa8624eeea858d006631eb32, type: 3}
+      propertyPath: cashText
+      value: 
+      objectReference: {fileID: 1605265414}
+    - target: {fileID: 146892868041165197, guid: b2f3d663fa8624eeea858d006631eb32, type: 3}
       propertyPath: selectedPlant
       value: 
       objectReference: {fileID: 11400000, guid: 14d75efbf2b4e4603adbf5227999fe8f, type: 2}
@@ -12530,6 +12538,10 @@ PrefabInstance:
       propertyPath: icon
       value: 
       objectReference: {fileID: -70628186, guid: 658dbe7ee4e1dd04f8711f5e3eb2b67e, type: 3}
+    - target: {fileID: 146892868055342762, guid: b2f3d663fa8624eeea858d006631eb32, type: 3}
+      propertyPath: cashText
+      value: 
+      objectReference: {fileID: 1605265414}
     - target: {fileID: 146892868055342763, guid: b2f3d663fa8624eeea858d006631eb32, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -12555,6 +12567,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 146892868315052909, guid: b2f3d663fa8624eeea858d006631eb32, type: 3}
+      propertyPath: cashText
+      value: 
+      objectReference: {fileID: 1605265414}
+    - target: {fileID: 146892868315052909, guid: b2f3d663fa8624eeea858d006631eb32, type: 3}
       propertyPath: selectedPlant
       value: 
       objectReference: {fileID: 11400000, guid: 14d75efbf2b4e4603adbf5227999fe8f, type: 2}
@@ -12562,6 +12578,10 @@ PrefabInstance:
       propertyPath: icon
       value: 
       objectReference: {fileID: -70628186, guid: 658dbe7ee4e1dd04f8711f5e3eb2b67e, type: 3}
+    - target: {fileID: 146892868344413826, guid: b2f3d663fa8624eeea858d006631eb32, type: 3}
+      propertyPath: cashText
+      value: 
+      objectReference: {fileID: 1605265414}
     - target: {fileID: 146892868344413827, guid: b2f3d663fa8624eeea858d006631eb32, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -12590,6 +12610,10 @@ PrefabInstance:
       propertyPath: rosie
       value: 
       objectReference: {fileID: 759970832}
+    - target: {fileID: 146892868397833055, guid: b2f3d663fa8624eeea858d006631eb32, type: 3}
+      propertyPath: cashText
+      value: 
+      objectReference: {fileID: 1605265414}
     - target: {fileID: 146892868423092866, guid: b2f3d663fa8624eeea858d006631eb32, type: 3}
       propertyPath: icon
       value: 
@@ -12598,6 +12622,10 @@ PrefabInstance:
       propertyPath: type
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 146892868423092866, guid: b2f3d663fa8624eeea858d006631eb32, type: 3}
+      propertyPath: cashText
+      value: 
+      objectReference: {fileID: 1605265414}
     - target: {fileID: 146892868423092866, guid: b2f3d663fa8624eeea858d006631eb32, type: 3}
       propertyPath: selectedPlant
       value: 
@@ -12622,6 +12650,10 @@ PrefabInstance:
       propertyPath: icon
       value: 
       objectReference: {fileID: 159928426, guid: 658dbe7ee4e1dd04f8711f5e3eb2b67e, type: 3}
+    - target: {fileID: 146892868591781511, guid: b2f3d663fa8624eeea858d006631eb32, type: 3}
+      propertyPath: cashText
+      value: 
+      objectReference: {fileID: 1605265414}
     - target: {fileID: 146892868658591684, guid: b2f3d663fa8624eeea858d006631eb32, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -12634,6 +12666,10 @@ PrefabInstance:
       propertyPath: icon
       value: 
       objectReference: {fileID: 159928426, guid: 658dbe7ee4e1dd04f8711f5e3eb2b67e, type: 3}
+    - target: {fileID: 146892868658591685, guid: b2f3d663fa8624eeea858d006631eb32, type: 3}
+      propertyPath: cashText
+      value: 
+      objectReference: {fileID: 1605265414}
     - target: {fileID: 146892868664036542, guid: b2f3d663fa8624eeea858d006631eb32, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -12650,6 +12686,10 @@ PrefabInstance:
       propertyPath: type
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 146892868664036543, guid: b2f3d663fa8624eeea858d006631eb32, type: 3}
+      propertyPath: cashText
+      value: 
+      objectReference: {fileID: 1605265414}
     - target: {fileID: 146892868680374587, guid: b2f3d663fa8624eeea858d006631eb32, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -12662,6 +12702,10 @@ PrefabInstance:
       propertyPath: type
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 146892868776004628, guid: b2f3d663fa8624eeea858d006631eb32, type: 3}
+      propertyPath: cashText
+      value: 
+      objectReference: {fileID: 1605265414}
     - target: {fileID: 146892868776004628, guid: b2f3d663fa8624eeea858d006631eb32, type: 3}
       propertyPath: selectedPlant
       value: 
@@ -12687,6 +12731,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 146892868810337622, guid: b2f3d663fa8624eeea858d006631eb32, type: 3}
+      propertyPath: cashText
+      value: 
+      objectReference: {fileID: 1605265414}
+    - target: {fileID: 146892868810337622, guid: b2f3d663fa8624eeea858d006631eb32, type: 3}
       propertyPath: selectedPlant
       value: 
       objectReference: {fileID: 0}
@@ -12715,6 +12763,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 146892868830955595, guid: b2f3d663fa8624eeea858d006631eb32, type: 3}
+      propertyPath: cashText
+      value: 
+      objectReference: {fileID: 1605265414}
+    - target: {fileID: 146892868830955595, guid: b2f3d663fa8624eeea858d006631eb32, type: 3}
       propertyPath: selectedPlant
       value: 
       objectReference: {fileID: 11400000, guid: 14d75efbf2b4e4603adbf5227999fe8f, type: 2}
@@ -12726,6 +12778,10 @@ PrefabInstance:
       propertyPath: type
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 146892868896628838, guid: b2f3d663fa8624eeea858d006631eb32, type: 3}
+      propertyPath: cashText
+      value: 
+      objectReference: {fileID: 1605265414}
     - target: {fileID: 146892868896628838, guid: b2f3d663fa8624eeea858d006631eb32, type: 3}
       propertyPath: selectedPlant
       value: 
@@ -12754,6 +12810,10 @@ PrefabInstance:
       propertyPath: type
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 146892868908839635, guid: b2f3d663fa8624eeea858d006631eb32, type: 3}
+      propertyPath: cashText
+      value: 
+      objectReference: {fileID: 1605265414}
     - target: {fileID: 146892868908839635, guid: b2f3d663fa8624eeea858d006631eb32, type: 3}
       propertyPath: selectedPlant
       value: 
@@ -12770,6 +12830,10 @@ PrefabInstance:
       propertyPath: icon
       value: 
       objectReference: {fileID: 159928426, guid: 658dbe7ee4e1dd04f8711f5e3eb2b67e, type: 3}
+    - target: {fileID: 146892868916375703, guid: b2f3d663fa8624eeea858d006631eb32, type: 3}
+      propertyPath: cashText
+      value: 
+      objectReference: {fileID: 1605265414}
     - target: {fileID: 146892868920734956, guid: b2f3d663fa8624eeea858d006631eb32, type: 3}
       propertyPath: icon
       value: 
@@ -12778,6 +12842,10 @@ PrefabInstance:
       propertyPath: type
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 146892868920734956, guid: b2f3d663fa8624eeea858d006631eb32, type: 3}
+      propertyPath: cashText
+      value: 
+      objectReference: {fileID: 1605265414}
     - target: {fileID: 146892868920734956, guid: b2f3d663fa8624eeea858d006631eb32, type: 3}
       propertyPath: selectedPlant
       value: 
@@ -12794,6 +12862,10 @@ PrefabInstance:
       propertyPath: icon
       value: 
       objectReference: {fileID: 159928426, guid: 658dbe7ee4e1dd04f8711f5e3eb2b67e, type: 3}
+    - target: {fileID: 146892868989610116, guid: b2f3d663fa8624eeea858d006631eb32, type: 3}
+      propertyPath: cashText
+      value: 
+      objectReference: {fileID: 1605265414}
     - target: {fileID: 146892868989610117, guid: b2f3d663fa8624eeea858d006631eb32, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -12810,6 +12882,10 @@ PrefabInstance:
       propertyPath: type
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 146892869080584360, guid: b2f3d663fa8624eeea858d006631eb32, type: 3}
+      propertyPath: cashText
+      value: 
+      objectReference: {fileID: 1605265414}
     - target: {fileID: 146892869080584360, guid: b2f3d663fa8624eeea858d006631eb32, type: 3}
       propertyPath: selectedPlant
       value: 
@@ -12831,6 +12907,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 146892869122682298, guid: b2f3d663fa8624eeea858d006631eb32, type: 3}
+      propertyPath: cashText
+      value: 
+      objectReference: {fileID: 1605265414}
+    - target: {fileID: 146892869122682298, guid: b2f3d663fa8624eeea858d006631eb32, type: 3}
       propertyPath: selectedPlant
       value: 
       objectReference: {fileID: 11400000, guid: 14d75efbf2b4e4603adbf5227999fe8f, type: 2}
@@ -12850,6 +12930,10 @@ PrefabInstance:
       propertyPath: type
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 146892869184392646, guid: b2f3d663fa8624eeea858d006631eb32, type: 3}
+      propertyPath: cashText
+      value: 
+      objectReference: {fileID: 1605265414}
     - target: {fileID: 146892869184392646, guid: b2f3d663fa8624eeea858d006631eb32, type: 3}
       propertyPath: plantyitemy
       value: 
@@ -12870,6 +12954,10 @@ PrefabInstance:
       propertyPath: icon
       value: 
       objectReference: {fileID: 159928426, guid: 658dbe7ee4e1dd04f8711f5e3eb2b67e, type: 3}
+    - target: {fileID: 146892869304711948, guid: b2f3d663fa8624eeea858d006631eb32, type: 3}
+      propertyPath: cashText
+      value: 
+      objectReference: {fileID: 1605265414}
     - target: {fileID: 146892869304711949, guid: b2f3d663fa8624eeea858d006631eb32, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -12890,6 +12978,10 @@ PrefabInstance:
       propertyPath: icon
       value: 
       objectReference: {fileID: 159928426, guid: 658dbe7ee4e1dd04f8711f5e3eb2b67e, type: 3}
+    - target: {fileID: 146892869333804495, guid: b2f3d663fa8624eeea858d006631eb32, type: 3}
+      propertyPath: cashText
+      value: 
+      objectReference: {fileID: 1605265414}
     - target: {fileID: 146892869404631860, guid: b2f3d663fa8624eeea858d006631eb32, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -12902,6 +12994,10 @@ PrefabInstance:
       propertyPath: icon
       value: 
       objectReference: {fileID: 159928426, guid: 658dbe7ee4e1dd04f8711f5e3eb2b67e, type: 3}
+    - target: {fileID: 146892869404631861, guid: b2f3d663fa8624eeea858d006631eb32, type: 3}
+      propertyPath: cashText
+      value: 
+      objectReference: {fileID: 1605265414}
     - target: {fileID: 146892869424021350, guid: b2f3d663fa8624eeea858d006631eb32, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -12914,10 +13010,18 @@ PrefabInstance:
       propertyPath: icon
       value: 
       objectReference: {fileID: 159928426, guid: 658dbe7ee4e1dd04f8711f5e3eb2b67e, type: 3}
+    - target: {fileID: 146892869424021351, guid: b2f3d663fa8624eeea858d006631eb32, type: 3}
+      propertyPath: cashText
+      value: 
+      objectReference: {fileID: 1605265414}
     - target: {fileID: 146892869482375472, guid: b2f3d663fa8624eeea858d006631eb32, type: 3}
       propertyPath: icon
       value: 
       objectReference: {fileID: 159928426, guid: 658dbe7ee4e1dd04f8711f5e3eb2b67e, type: 3}
+    - target: {fileID: 146892869482375472, guid: b2f3d663fa8624eeea858d006631eb32, type: 3}
+      propertyPath: cashText
+      value: 
+      objectReference: {fileID: 1605265414}
     - target: {fileID: 146892869482375473, guid: b2f3d663fa8624eeea858d006631eb32, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -12938,6 +13042,10 @@ PrefabInstance:
       propertyPath: icon
       value: 
       objectReference: {fileID: -70628186, guid: 658dbe7ee4e1dd04f8711f5e3eb2b67e, type: 3}
+    - target: {fileID: 146892869690382237, guid: b2f3d663fa8624eeea858d006631eb32, type: 3}
+      propertyPath: cashText
+      value: 
+      objectReference: {fileID: 1605265414}
     - target: {fileID: 146892869906725024, guid: b2f3d663fa8624eeea858d006631eb32, type: 3}
       propertyPath: icon
       value: 
@@ -12946,6 +13054,10 @@ PrefabInstance:
       propertyPath: type
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 146892869906725024, guid: b2f3d663fa8624eeea858d006631eb32, type: 3}
+      propertyPath: cashText
+      value: 
+      objectReference: {fileID: 1605265414}
     - target: {fileID: 146892869906725024, guid: b2f3d663fa8624eeea858d006631eb32, type: 3}
       propertyPath: selectedPlant
       value: 
@@ -12970,6 +13082,10 @@ PrefabInstance:
       propertyPath: icon
       value: 
       objectReference: {fileID: 159928426, guid: 658dbe7ee4e1dd04f8711f5e3eb2b67e, type: 3}
+    - target: {fileID: 146892869925383665, guid: b2f3d663fa8624eeea858d006631eb32, type: 3}
+      propertyPath: cashText
+      value: 
+      objectReference: {fileID: 1605265414}
     - target: {fileID: 146892869999847476, guid: b2f3d663fa8624eeea858d006631eb32, type: 3}
       propertyPath: icon
       value: 
@@ -12978,6 +13094,10 @@ PrefabInstance:
       propertyPath: type
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 146892869999847476, guid: b2f3d663fa8624eeea858d006631eb32, type: 3}
+      propertyPath: cashText
+      value: 
+      objectReference: {fileID: 1605265414}
     - target: {fileID: 146892869999847476, guid: b2f3d663fa8624eeea858d006631eb32, type: 3}
       propertyPath: selectedPlant
       value: 
@@ -13002,6 +13122,10 @@ PrefabInstance:
       propertyPath: icon
       value: 
       objectReference: {fileID: 159928426, guid: 658dbe7ee4e1dd04f8711f5e3eb2b67e, type: 3}
+    - target: {fileID: 146892870069856745, guid: b2f3d663fa8624eeea858d006631eb32, type: 3}
+      propertyPath: cashText
+      value: 
+      objectReference: {fileID: 1605265414}
     - target: {fileID: 7563061930927640188, guid: b2f3d663fa8624eeea858d006631eb32, type: 3}
       propertyPath: m_RootOrder
       value: 4

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CropManager : MonoBehaviour
 {
@@ -17,7 +18,11 @@ public class CropManager : MonoBehaviour
     public SeedType type;
     public Sprite icon;
 
-    public FarmManager fm;
+    FarmManager fm;
+
+    public int rosieCash;
+
+    public Text cashText;
 
 // public Rigidbody2D rb2d;
 
@@ -31,13 +36,14 @@ public class CropManager : MonoBehaviour
         // npc = NPCScript.singletonNPC;
         plant = transform.GetChild(0).GetComponent<SpriteRenderer>();
         fm = transform.parent.GetComponent<FarmManager>();
+        rosieCash = rosie.playerCash;
+        cashText.text = "$" + rosieCash;
     }
 
     void Update()
     {   
-        // float distance = Vector3.Distance (rosie.transform.position, 
-        //     fm.transform.position);
-            // Debug.Log(distance);
+        rosieCash = rosie.playerCash;
+        cashText.text = "$" + rosieCash;
         if(isPlanted){
             timer -= Time.deltaTime;
             if(timer < 0 && plantStage < selectedPlant.plantStages.Length-1){
@@ -87,42 +93,43 @@ public class CropManager : MonoBehaviour
     }
 
     public void Buy(){
-        rosie.inventory.Add(this);
-        fm.Transaction(-this.selectedPlant.buyPrice);
         
-        // if(this.type == SeedType.WHEAT_SEED){
-        //     if(rosie.playerCash - this.selectedPlant.price >= 0){
-        //         rosie.playerCash = rosie.playerCash - this.selectedPlant.price;
-        //         rosie.inventory.Add(this);
-        //         Debug.Log("Bought Wheat Seed");
-        //         Debug.Log("Rosie cash is now " + rosie.playerCash);    
-        //     }
+        // rosie.inventory.Add(this);
+            
+        
+       
+
+        // fm.Transaction(-selectedPlant.buyPrice);
+        
+        if(this.type == SeedType.WHEAT_SEED){
+            if(rosie.playerCash - this.selectedPlant.buyPrice >= 0){
+                rosie.playerCash = rosie.playerCash - this.selectedPlant.buyPrice;
+                rosie.inventory.Add(this);
+                cashText.text = "$" + rosieCash;
+                Debug.Log("Bought Wheat Seed");
+                Debug.Log("Rosie cash is now " + rosie.playerCash);    
+            }
                 
-        // } else if(this.type == SeedType.BEET_SEED){
-        //     if(rosie.playerCash - this.selectedPlant.price >= 0){
-        //         rosie.playerCash = rosie.playerCash - this.selectedPlant.price;
-        //         rosie.inventory.Add(this);
-        //         Debug.Log("Bought Wheat Seed");  
-        //         Debug.Log("Rosie cash is now " + rosie.playerCash);      
-        //     }
+        } else if(this.type == SeedType.BEET_SEED){
+            if(rosie.playerCash - this.selectedPlant.buyPrice >= 0){
+                rosie.playerCash = rosie.playerCash - this.selectedPlant.buyPrice;
+                rosie.inventory.Add(this);
+                cashText.text = "$" + rosieCash;
+                Debug.Log("Bought Wheat Seed");  
+                Debug.Log("Rosie cash is now " + rosie.playerCash);      
+            }
              
-        // }
+        }
         
     }
 
     void Plant(PlantObject newPlant){
         selectedPlant = newPlant;
-        // if(selectedPlant.seedy == SeedType.WHEAT_SEED){
-        //     type = SeedType.WHEAT;
-        // }else if(selectedPlant.seedy == SeedType.BEET_SEED){
-        //     type = SeedType.BEET;
-        // }else{
-        //     type = selectedPlant.seedy;
-        // }
         type = selectedPlant.seedy;
         icon = selectedPlant.icon;
         Debug.Log("Planted");
         isPlanted = true;
+        // fm.Transaction(-selectedPlant.buyPrice);
         newBool = true;
         plantStage = 0;
         UpdatePlant();

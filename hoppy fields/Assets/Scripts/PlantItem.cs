@@ -12,11 +12,11 @@ public class PlantItem : MonoBehaviour
 
     public PlantObject plant;
     public Image icon;
-    // FarmManager fm;
+    FarmManager fm;
 
     void Start()
     {
-        // fm = FindObjectOfType<FarmManager>();
+        fm = FindObjectOfType<FarmManager>();
 
         // InitializeUI();
     }

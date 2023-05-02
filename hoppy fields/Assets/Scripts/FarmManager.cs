@@ -9,7 +9,7 @@ public class FarmManager : MonoBehaviour
     public PlantObject selectPlant;
     public bool isPlanting = false;
     public Text moneyText;
-    public int money = 50;
+    public int money = 20;
     
 
     // Start is called before the first frame update
@@ -18,11 +18,6 @@ public class FarmManager : MonoBehaviour
         moneyText.text = "$" + money;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void SelectPlant(PlantObject newPlant){
         if(selectPlant == newPlant){
