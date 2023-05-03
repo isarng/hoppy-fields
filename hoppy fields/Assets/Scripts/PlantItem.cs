@@ -16,7 +16,7 @@ public class PlantItem : MonoBehaviour
 
     void Start()
     {
-        fm = FindObjectOfType<FarmManager>();
+        // fm = FindObjectOfType<FarmManager>();
 
         // InitializeUI();
     }

@@ -13,16 +13,10 @@ public class Slots_UI : MonoBehaviour
     public SeedType seedPlant;
 
     public CropManager plantedOk;
-    public bool someBool;
 
     void Start(){
         fm = FindObjectOfType<FarmManager>();
-        // someBool = 
     }
-
-    // void Update(){
-    //     DecItem();
-    // }
 
     public void SetItem(Inventory.Slot slot){
         if(slot != null){
@@ -45,10 +39,29 @@ public class Slots_UI : MonoBehaviour
             
             CropManager.newBool = false;
         }
-    
-    // if(slot.count <= 1){
-        
-    // }          
+
+    }
+
+    public void Selling(Inventory.Slot slot){
+        if(slot.type != SeedType.NONE){
+            if(slot.type == SeedType.WHEAT){
+                CropManager.stopSellWheat = false;
+                if(CropManager.wheatBool == true){
+                    slot.RemoveItem();
+                    quantityText.text = slot.count.ToString();
+                    CropManager.stopSellWheat = true;
+                    CropManager.wheatBool = false;
+                }
+            }else if(slot.type == SeedType.BEET){
+                CropManager.stopSellBeet = false;
+                if(CropManager.beetBool == true){
+                    slot.RemoveItem();
+                    quantityText.text = slot.count.ToString();
+                    CropManager.stopSellBeet = true;
+                    CropManager.beetBool = false;  
+                }   
+            } 
+        }
     }
 
 

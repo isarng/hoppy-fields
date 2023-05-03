@@ -6,10 +6,16 @@ using UnityEngine.UI;
 public class CropManager : MonoBehaviour
 {
     Rosie rosie;
-    // NPCScript npc;
 
     public bool isPlanted = false;
     public static bool newBool = false;
+    public static bool stopSellBeet = true;
+
+    public static bool stopSellWheat = true;
+
+    public static bool wheatBool = false;
+
+    public static bool beetBool = false;
 
     SpriteRenderer plant;
     int plantStage = 0;
@@ -24,16 +30,9 @@ public class CropManager : MonoBehaviour
 
     public Text cashText;
 
-// public Rigidbody2D rb2d;
-
-    // private void Awake(){
-    //     rb2d = GetComponent<Rigidbody2D>();
-// }
-
     void Start()
     {
         rosie = Rosie.singletonR;
-        // npc = NPCScript.singletonNPC;
         plant = transform.GetChild(0).GetComponent<SpriteRenderer>();
         fm = transform.parent.GetComponent<FarmManager>();
         rosieCash = rosie.playerCash;
@@ -54,25 +53,6 @@ public class CropManager : MonoBehaviour
         }
     }
 
-//     if(Input.GetKeyDown(KeyCode.Space)){
-    //         Vector3Int position = new Vector3Int((int)rosie.transform.position.x,
-    //         (int)rosie.transform.position.y, 0);
-
-    //         if(GameManager.instance.tileManager.IsInteractable(position)){
-    //             Debug.Log("woohoo");
-    //             // GameManager.instance.tileManager.SetInteracted(position);
-    //             if(isPlanted){
-    //                 if(plantStage == selectedPlant.plantStages.Length - 1){
-    //                     Harvest();
-    //                     rosie.inventory.Add(this);
-    //                 }
-    //             }else{
-    //                 Plant();
-    //             }
-    //         }
-    //     }
-//}
-
     private void OnMouseDown(){
         if(isPlanted){
             if(plantStage == selectedPlant.plantStages.Length - 1){
@@ -88,18 +68,10 @@ public class CropManager : MonoBehaviour
     void Harvest(){
         Debug.Log("Harvested");
         isPlanted = false;
-        // newBool = false;
         plant.gameObject.SetActive(false);
     }
 
     public void Buy(){
-        
-        // rosie.inventory.Add(this);
-            
-        
-       
-
-        // fm.Transaction(-selectedPlant.buyPrice);
         
         if(this.type == SeedType.WHEAT_SEED){
             if(rosie.playerCash - this.selectedPlant.buyPrice >= 0){
@@ -121,6 +93,23 @@ public class CropManager : MonoBehaviour
              
         }
         
+    }
+
+    public void Sell(){
+        if(this.type == SeedType.WHEAT && stopSellWheat == false){
+            wheatBool = true;
+            rosie.playerCash = rosie.playerCash + this.selectedPlant.sellPrice;
+            cashText.text = "$" + rosieCash;
+            Debug.Log("Sold Wheat Seed");
+            Debug.Log("Rosie cash is now " + rosie.playerCash);
+        } else if(this.type == SeedType.BEET && stopSellBeet == false){
+            beetBool = true;
+            rosie.playerCash = rosie.playerCash + this.selectedPlant.sellPrice;
+            cashText.text = "$" + rosieCash;
+            Debug.Log("Sold Wheat Seed");  
+            Debug.Log("Rosie cash is now " + rosie.playerCash);    
+        }          
+            
     }
 
     void Plant(PlantObject newPlant){

@@ -13,8 +13,6 @@ public class Inventory_UI : MonoBehaviour
 
     public List<Slots_UI> slots = new List<Slots_UI>();
 
-
-    // Update is called once per frame
     void Update()
     {
         Refresh();
@@ -37,11 +35,10 @@ public class Inventory_UI : MonoBehaviour
             for(int i = 0; i < slots.Count; i++){
                 if(rosie.inventory.slots[i].type != SeedType.NONE){
                     slots[i].SetItem(rosie.inventory.slots[i]);
-                }
-                else{
+                }else{
                     slots[i].SetEmpty();
                 }
-                
+                slots[i].Selling(rosie.inventory.slots[i]);
                 slots[i].DecItem(rosie.inventory.slots[i]);
                 
             }
@@ -49,15 +46,8 @@ public class Inventory_UI : MonoBehaviour
     }
 
 
-
     public void Remove(int slotID){
         rosie.inventory.Remove(slotID);
         Refresh();
-        // CropManager itemToDrop = GameManager.instance.itemManager.GetItemByType(rosie.inventory.slots[slotID].type);
-        // if(itemToDrop != null){
-        //     // rosie.DropItem(itemToDrop);
-        //     rosie.inventory.Remove(slotID);
-        //     Refresh();
-        // }
     }
 }
