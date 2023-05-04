@@ -5,14 +5,16 @@ using UnityEngine;
 public class NPCShop : MonoBehaviour
 {
     Rosie rosie;
-    NPCScript npc;
+    // NPCScript npc;
+
+    public GameObject npcShop;
     public GameObject npcSell;
     public GameObject shopPanel;
     public GameObject sellPanel;
 
     void Start(){
         rosie = Rosie.singletonR;
-        npc = NPCScript.singletonNPC;
+        // npc = NPCScript.singletonNPC;
     }
 
     void Update(){
@@ -28,7 +30,7 @@ public class NPCShop : MonoBehaviour
 
     public void DisplayShop(){
         float distance = Vector3.Distance (rosie.transform.position, 
-            npc.transform.position);
+            npcShop.transform.position);
         float distance2 = Vector3.Distance (rosie.transform.position, 
             npcSell.transform.position);
         if(distance <= 2){

@@ -133,5 +133,5 @@ public class CropManager : MonoBehaviour
 }
 
 public enum SeedType{
-    NONE, WHEAT, BEET, WHEAT_SEED, BEET_SEED
+    NONE, WHEAT, BEET, WHEAT_SEED, BEET_SEED, SUPER_BEET, SUPER_BEET_SEED
 }
