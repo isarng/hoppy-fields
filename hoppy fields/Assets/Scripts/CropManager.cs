@@ -60,7 +60,7 @@ public class CropManager : MonoBehaviour
                 rosie.inventory.Add(this);
             }
         }
-        else if(fm.isPlanting && fm.selectPlant.buyPrice <= fm.money){
+        else if(fm.isPlanting){
             Plant(fm.selectPlant);
         }
     } 
@@ -118,7 +118,6 @@ public class CropManager : MonoBehaviour
         icon = selectedPlant.icon;
         Debug.Log("Planted");
         isPlanted = true;
-        // fm.Transaction(-selectedPlant.buyPrice);
         newBool = true;
         plantStage = 0;
         UpdatePlant();

@@ -7,12 +7,6 @@ public class AnimationStateChanger : MonoBehaviour
     public Animator animator;
     public string currentState = "Idle";
 
-    // IEnumerator Start(){
-    //     ChangeAnimationState("Idle");
-    //     yield return new WaitForSeconds(3);
-    //     ChangeAnimationState("Walking");
-    // }
-
     void Start(){
         ChangeAnimationState("Idle");
     }
